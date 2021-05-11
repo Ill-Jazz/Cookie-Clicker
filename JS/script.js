@@ -2,7 +2,7 @@
 First: 1 cookie that provides a cookie per click
         setup requirements: variables, event-listener, for loop
  */
-(() => {
+
     let count = 0;
     let click = 1;
     let autoClick = 1;
@@ -35,12 +35,27 @@ First: 1 cookie that provides a cookie per click
             count = count - clickMultiCost; //cost of purchase is substracted from the count
             click = click * clickMultiply;
             perStair.innerHTML = click + " per stair";
-            counterClicked.innerHTML = count;
+            counterClicked.innerHTML = count + " Cookies";
         }
 
     })
 
-})();
+    autoClicked.addEventListener("click", function autoClicker() {
+        if ((count <= autoCost) > 0) { // the alert has to come first in the if statement
+            alert("You ain't got the dough yet!");
+            return;
+        }
+
+        else
+            count = count - autoCost; //cost of purchase is substracted from the count
+            perStair.innerHTML = click + " per stair";
+        {setInterval (function() {
+            counterClicked.innerHTML = count++ + " Cookies";
+        },1000)
+        }
+    })
+
+
 
 
 /*const purchaser = document.querySelector("#multiplierId");
