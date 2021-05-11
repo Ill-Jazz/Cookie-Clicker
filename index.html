@@ -9,25 +9,39 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-<section class="gameCount">
-    <div class="score">
-        <h2>Player</h2>
-        <p id="scoreId" >Score 0</p>
-    </div>
-    <div class="counter">
-        <h2 id="cookiesCounter">Cookies</h2>
-        <p>per second</p>
-    </div>
-    <div class="bigCookie">
-        <img src="Assets/cookie.png" alt="cookie" id="bigCookie" width="200px" height="200px">
-    </div>
-</section>
-<section>
-    <div class="gameStore" id="storeId">
-        <h1>Store</h1>
-    </div>
-</section>
+<main>
+    <section class="gameCount">
+        <div class="score">
+            <h1>Holey moley bakery</h1>
+            <p>Welcome to your stairway to cookie heaven!</p>
+        </div>
+        <div class="counter">
+            <h2 id="cookiesCounter">Cookies</h2>
+            <p id="cookiesClick">per stair</p>
+            <p id="scoreDisplay">per second</p>
+        </div>
+        <div class="biggestCookie">
+            <img src="Assets/cookie.png" alt="cookie" id="bigCookie" width="200px" height="200px">
+            <p>Click me to heaven.</p>
 
+        </div>
+    </section>
+    <section>
+        <div class="gameStore" id="storeId">
+            <h1>Store</h1>
+        </div>
+        <div class="upgrades">
+            <div class="upgrade1">
+                <button id="multiplyBtn">Treat yo self double to infinity!</button>
+                <label for="multiplyBtn" id="multiplyLabel">cost = 50</label>
+            </div>
+            <div class="upgrade2">
+                <button id="autoBtn">Have mercy on your mouse!</button>
+                <label for="autoBtn" id="autoLabel">cost = 100</label>
+            </div>
+        </div>
+    </section>
+</main>
 <script src="JS/script.js"></script>
 </body>
 </html>

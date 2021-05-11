@@ -2,40 +2,53 @@
 First: 1 cookie that provides a cookie per click
         setup requirements: variables, event-listener, for loop
  */
+(() => {
+    let count = 0;
+    let click = 1;
+    let autoClick = 1;
 
-let count = 0;
-const score = document.querySelector("#scoreId")
-const store = document.querySelector("#storeId")
-const clickCounter = document.querySelector("#cookiesCounter");
-const button = document.querySelector("#bigCookie");
-button.addEventListener("click", counterMouse);
+    let clickMultiply = 2;
+    let clickMultiCost = 50;
 
-function counterMouse() {
-    count += 1;
-    clickCounter.innerHTML = count + " Cookies";
-    score.innerHTML = count;
+    let autoMultiply = 2;
+    let autoCost = 100;
 
-    if (count === 10) {
-        let multiplyCookie = document.createElement("button");
-        multiplyCookie.setAttribute("id", "multiplierId")
-        store.append(multiplyCookie);
+    const perStair = document.querySelector("#cookiesClick");
+    const score = document.querySelector("#scoreDisplay");
+    const autoClicked = document.querySelector("#autoBtn");
+    const multiplierClicked = document.querySelector("#multiplyBtn");
+    const store = document.querySelector("#storeId");
+    const counterClicked = document.querySelector("#cookiesCounter");
+    const button = document.querySelector("#bigCookie");
 
-        const multiplier = document.querySelector("#multiplierId");
-        multiplier.addEventListener("click", multiply)
+    button.addEventListener("click", counterMouse);
 
-        function multiply() {
-            clickCounter.innerHTML = (count += 2) + " Cookies";
+    function counterMouse() {
+        count = count + click;
+        counterClicked.innerHTML = count + " Cookies";
+    }
+// doubling the amount of cookies after the multiplier is clicked
+    multiplierClicked.addEventListener("click", function () {
+        if ((count <= clickMultiCost) > 0) { // the alert has to come first in the if statement
+            alert("You ain't got the dough yet!")
+        } else {
+            count = count - clickMultiCost; //cost of purchase is substracted from the count
+            click = click * clickMultiply;
+            perStair.innerHTML = click + " per stair";
+            counterClicked.innerHTML = count;
         }
 
+    })
 
-        /*const purchaser = document.querySelector("#multiplierId");
-        purchaser.addEventListener("click", purchase);
+})();
 
-        function purchase(){
-            let purchased = (count-=20);
-            score.innerHTML = purchased;
 
-        }
+/*const purchaser = document.querySelector("#multiplierId");
+purchaser.addEventListener("click", purchase);
+
+function purchase(){
+    let purchased = (count-=20);
+    score.innerHTML = purchased;
+
+}
 */
-
-    }}
