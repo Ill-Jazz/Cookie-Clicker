@@ -20,6 +20,8 @@ First: 1 cookie that provides a cookie per click
     const store = document.querySelector("#storeId");
     const counterClicked = document.querySelector("#cookiesCounter");
     const button = document.querySelector("#bigCookie");
+    const autoCostUpdate = document.querySelector("#autoLabel");
+    const multiplyCostUpdate = document.querySelector("#multiplyLabel");
 
     button.addEventListener("click", counterMouse);
 
@@ -36,6 +38,8 @@ First: 1 cookie that provides a cookie per click
             click = click * clickMultiply;
             perStair.innerHTML = click + " per stair";
             counterClicked.innerHTML = count + " Cookies";
+            clickMultiCost = clickMultiCost*2;
+            multiplyCostUpdate.innerHTML = "cost = " + clickMultiCost;
         }
 
     })
@@ -43,19 +47,19 @@ First: 1 cookie that provides a cookie per click
     autoClicked.addEventListener("click", function autoClicker() {
         if ((count <= autoCost) > 0) { // the alert has to come first in the if statement
             alert("You ain't got the dough yet!");
-            return;
-        }
 
-        else
+        }
+        else{
             count = count - autoCost; //cost of purchase is substracted from the count
             perStair.innerHTML = click + " per stair";
         {setInterval (function() {
             counterClicked.innerHTML = count++ + " Cookies";
         },1000)
         }
+        autoCost = autoCost*2;
+            autoCostUpdate.innerHTML = "cost = " + autoCost;
+        }
     })
-
-
 
 
 /*const purchaser = document.querySelector("#multiplierId");
