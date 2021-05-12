@@ -1,0 +1,16 @@
+body {
+    background-image: url("../Assets/clouds.jpg");
+    background-repeat: no-repeat;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+section {
+    margin-top:10%;
+    width:45%;
+    background-color: lightblue;
+    border:10px solid whitesmoke;
+    padding: 20px;
+}
