@@ -1,7 +1,4 @@
-/*
-First: 1 cookie that provides a cookie per click
-        setup requirements: variables, event-listener, for loop
- */
+
 
 let count = 0;
 let click = 1;
@@ -65,13 +62,3 @@ autoClicked.addEventListener("click", function autoClicker() {
 
 })
 
-
-/*const purchaser = document.querySelector("#multiplierId");
-purchaser.addEventListener("click", purchase);
-
-function purchase(){
-    let purchased = (count-=20);
-    score.innerHTML = purchased;
-
-}
-*/
