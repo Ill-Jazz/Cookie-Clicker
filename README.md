@@ -2,7 +2,13 @@
 
 
 Started off without reading the instructions
-Training on building logic
+Training on building logic:
+- write down the problem and break it down to the smallest steps possible 
+  (= writing Pseudo code)
+    Best scenario: each step = 1 line of code;
+
+
+
 and working on my Javascript syntax
 
 manipulating DOM
